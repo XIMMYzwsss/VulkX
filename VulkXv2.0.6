@@ -4,4 +4,4 @@ local function xor(a,b) local r=0 for k=0,7 do local A,B=a%2,b%2 if A~=B then r=
 local sum=0 for i=1,#DfHAh/ do sum=(sum+DfHAh/:byte(i))%65536 end if sum~=22087 then return end
 local tmp=decode(DfHAh/) local buf={} for i=1,#tmp do table.insert(buf,string.char(xor(tmp:byte(i),gWZP21:byte((i-1)%#gWZP21+1)))) end
 local script=table.concat(buf) local sum2=0 for i=1,#script do sum2=(sum2+script:byte(i))%65536 end if sum2~=44664 then return end
-local run=(loadstring or load) run(script)() 
+local run=(loadstring or load) run(script)()
